@@ -17,3 +17,11 @@
     endpoints.MapControllerRoute("default", "{controllers=Home}/{action=Index}/{id?}");
 });
 ```
+* Create `Controllers`, `Data`, & `Models` folders in root of project
+* Create your models in `Models` folder
+* In `appsettings.json` add connection string. Don't forget to change database name.
+```
+"ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=DBNAMEHERE;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+```
