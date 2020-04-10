@@ -43,3 +43,17 @@
 services.AddDbContext<DemoClass13DbContext>(options =>
       options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 ```
+* Setup our app to support dependency injection. We do this by adding a constructor to our startup class that requires IConfiguration. This is the code for that:
+```
+ public Startup(IConfiguration configuration)
+  {
+	    
+  }
+```
+* Make sure to add `using Microsoft.Extensions.Configuration` and `using Microsoft.Extensions.DependencyInjection` libraries
+* Open `Packager Manager Console` in the `tools` bar under `NuGet Package Manager`
+* Add initial migration by typing `add-migration` with a message with no spaces (i.e. initial)
+* Update database by typing `update-database`
+* Now you can start adding tables in the `Data` folder under your `DbContext` file
+	* `public DbSet<MODELNAME> TABLENAME {get; set;}`
+* Always `add-migration` and `update-database` after a major change.
