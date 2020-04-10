@@ -20,8 +20,11 @@
 * Create `Controllers`, `Data`, & `Models` folders in root of project
 * Create your models in `Models` folder
 * In `appsettings.json` add connection string. Don't forget to change database name.
+  * To be more secured, add user secrets by right clicking on your project and `add user secrets`. You can add your connection string in the newly populated file, and delete the appsettings.json.
 ```
 "ConnectionStrings": {
     "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=DBNAMEHERE;Trusted_Connection=True;MultipleActiveResultSets=true"
   }
 ```
+
+
