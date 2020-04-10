@@ -51,7 +51,7 @@ services.AddDbContext<DemoClass13DbContext>(options =>
   }
 ```
 * Make sure to add `using Microsoft.Extensions.Configuration` and `using Microsoft.Extensions.DependencyInjection` libraries
-* Open `Packager Manager Console` in the `tools` bar under `NuGet Package Manager`
+* Open `Packager Manager Console` in the `tools` bar under `NuGet Package Manager` or on the bottom left tab.
 * Add initial migration by typing `add-migration` with a message with no spaces (i.e. initial)
 * Update database by typing `update-database`
 * Now you can start adding tables in the `Data` folder under your `DbContext` file
