@@ -37,4 +37,9 @@
 	 
 	}
  ```
-
+* Go to `Startup.cs`
+* Register DbContext in services. by add the following code inside configureServices() add the following code:(Change out the name of the Context for your DbContext, as well as the “DefaultConnection” with your DefualtConnection name found in your appsettings.json file.
+```
+services.AddDbContext<DemoClass13DbContext>(options =>
+      options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+```
