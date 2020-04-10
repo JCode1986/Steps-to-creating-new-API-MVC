@@ -3,7 +3,7 @@
   * Choose empty
   * In `Startup.cs` in `ConfigureServices` method, add `services.AddMvc()` in code block.
   * In `Configure` method
-  *replace*
+  <strong>replace</strong>
   ```
   endpoints.MapGet("/", async context =>
 {
