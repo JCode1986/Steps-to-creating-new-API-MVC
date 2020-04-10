@@ -28,5 +28,13 @@
     "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=DBNAMEHERE;Trusted_Connection=True;MultipleActiveResultSets=true"
   }
 ```
-
+* Create a new class in the `Data` folder for your DbContext (i.e. <EnterDBNameHere>DbContext)
+* Derive your new DbContext class from DbContext (i.e. <EnterDBNameHere>DbContext : DbContext) a. Make sure you bring in the namespace `Microsoft.EntityFrameworkCore`
+* Create a new Constructor for your DbContext class, and require the DbContextOptions parameter and have that constructor derive from the base a. Example Constructor looks like this:
+ ```
+ public DemoClass13DbContext(DbContextOptions<DemoClass13DbContext> options) : base(options)
+    {
+	 
+	}
+ ```
 
